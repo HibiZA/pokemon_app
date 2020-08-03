@@ -56,7 +56,8 @@ class _HomepageState extends State<Homepage> {
                   return ListTile(
                     leading: Hero(
                       tag: "${pokemon.pokemon[index].id}",
-                      child: Image.network("${pokemon.pokemon[index].img}"),
+                      child:
+                          Image.network(pokemon.pokemon[index].img.toString()),
                     ),
                     title: Text(
                       "${pokemon.pokemon[index].name}",
