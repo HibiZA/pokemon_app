@@ -12,6 +12,7 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int ind = index + 1;
     return Scaffold(
       appBar: AppBar(
         title: Text("${pokemon.pokemon[index].name}"),
@@ -80,7 +81,7 @@ class Details extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       children: [
-                                        Image.asset("assets/egg.png",
+                                        Image.asset("lib/assets/egg.png",
                                             height: 70, width: 90),
                                         Text(
                                           "${pokemon.pokemon[index].egg}",
@@ -115,7 +116,7 @@ class Details extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       children: [
-                                        Image.asset("assets/candy.png",
+                                        Image.asset("lib/assets/candy.png",
                                             height: 70, width: 90),
                                         Text(
                                           "${pokemon.pokemon[index].candyCount}",
@@ -146,7 +147,7 @@ class Details extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage(pokemon.pokemon[index].img))),
+                        image: AssetImage("lib/assets/$ind.png"))),
               ),
             ),
           ),

@@ -31,6 +31,7 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
+    int ind;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
@@ -53,11 +54,11 @@ class _HomepageState extends State<Homepage> {
             ? ListView.builder(
                 itemCount: pokemon.pokemon.length,
                 itemBuilder: (context, index) {
+                  ind = (index + 1);
                   return ListTile(
                     leading: Hero(
                       tag: "${pokemon.pokemon[index].id}",
-                      child:
-                          Image.network(pokemon.pokemon[index].img.toString()),
+                      child: Image.asset("lib/assets/$ind.png"),
                     ),
                     title: Text(
                       "${pokemon.pokemon[index].name}",
